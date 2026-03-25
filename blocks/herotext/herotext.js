@@ -1,6 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
+  console.log("Block = " + block);
   const wrapper = block.querySelector('div > div');
   if (!wrapper) return;
 
