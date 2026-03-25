@@ -1,4 +1,6 @@
-/* Main Hero Block */
+/* =========================
+   HeroText Block - Base
+========================= */
 .herotext {
   text-align: center;
   padding: 100px 20px;
@@ -11,20 +13,65 @@
   margin: 0 auto;
 }
 
-/* First paragraph = Heading */
+/* =========================
+   Heading Styles
+   (Supports both <h1> and fallback <p>)
+========================= */
+.herotext h1,
 .herotext p:first-child {
   font-size: 72px;
   line-height: 1.1;
   font-weight: 700;
   color: #000;
   margin: 0 0 30px;
+  letter-spacing: -1px;
 }
 
-/* Second paragraph = Description */
-.herotext p:last-child {
+/* =========================
+   Description Styles
+========================= */
+.herotext p {
   font-size: 20px;
   line-height: 1.6;
   color: #555;
   max-width: 900px;
   margin: 0 auto;
+}
+
+/* Avoid styling heading twice if it's still a <p> */
+.herotext p:first-child {
+  max-width: 100%;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 1024px) {
+  .herotext h1,
+  .herotext p:first-child {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .herotext {
+    padding: 60px 15px;
+  }
+
+  .herotext h1,
+  .herotext p:first-child {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .herotext p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .herotext h1,
+  .herotext p:first-child {
+    font-size: 28px;
+  }
 }
