@@ -1,1 +1,30 @@
+/* Main Hero Block */
+.herotext {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f3f3f3;
+}
 
+/* Inner wrapper */
+.herotext > div > div {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* First paragraph = Heading */
+.herotext p:first-child {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 30px;
+}
+
+/* Second paragraph = Description */
+.herotext p:last-child {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+}
